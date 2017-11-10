@@ -1,0 +1,10 @@
+version: '3'
+services:
+  python:
+    build:
+      context: ./python
+      args:
+        - INSTALL_APPLICATION_PATH=${INSTALL_APPLICATION_PATH}
+    volumes:
+      - ${INSTALL_APPLICATION_PATH}:/code
+    tty: true
